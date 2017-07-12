@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+input[type=submit] {
+  display: none;
+}
+
+.List li > div {
+	display: inline-block;
+  position: relative;
+}
+
+.List li > div span {
+	position: absolute;
+  border: 2px solid transparent;
+  padding: 1px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.List li > div input, .List li > div button {
+	position: relative;
+  z-index: -1;
+  visibility: hidden;
+  font-size: 16px;
+  text-align: center;
+}
+
+.List li > div div{
+  position: absolute;
+  width: 201px;
+  height: 100%;
+  top: 0;
+  left: 100%;
+}
+
+.List li > div button {
+  display: inline-block;
+  margin-left: 7px;
+}
+
+.List li > div span.editing {
+  z-index: -1;
+  visibility: hidden;
+}
+
+.List li > div span.editing + input {
+  z-index: 0;
+  visibility: visible;
+}
+
+.List li > div span.editing + input + a, .List li > div span.editing + input + div button {
+  z-index: 0;
+  visibility: visible;
+}
